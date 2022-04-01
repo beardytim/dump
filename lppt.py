@@ -7,8 +7,6 @@ class TaxBand:
 def calculate(property_value):
     
     tax_bands = [TaxBand(0,145000,0),TaxBand(145000,250000,0.02),TaxBand(250000,325000,0.05),TaxBand(325000,750000,0.1),TaxBand(750000,float('inf'),0.12)]
-    
-    # property_value = float(input("Enter: "))
     bands = []
     tax = 0
     
@@ -24,6 +22,8 @@ def calculate(property_value):
     
     return tax
 
-property_value = 325000
-tax = calculate(property_value)
-print(tax)
+if __name__ == "__main__":
+    # property_value = float(input("Enter: "))
+    property_value = 325000
+    tax = calculate(property_value)
+    print(tax)
